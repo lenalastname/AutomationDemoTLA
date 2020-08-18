@@ -24,7 +24,7 @@ public class BaseTest {
     private static String propertyPath = "src/main/resources/config/configuration.properties";
 
     ExtentReports extentReports;
-    ExtentTest extentTest;
+    public ExtentTest extentTest;
     protected Screenshot screenshot;
 
     @BeforeSuite
@@ -75,6 +75,8 @@ public class BaseTest {
         }
         drivers.set(driver);
         getDriver().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        getDriver().manage().window().maximize();
+
     }
 
     public WebDriver getDriver() {

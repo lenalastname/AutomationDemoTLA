@@ -10,16 +10,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class BasePage {                  // this class can contain all web elements
+public class BasePage {
     protected WebDriver driver;
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
 
-        PageFactory.initElements(driver, this);  // this function connects driver with all webelements
+        PageFactory.initElements(driver, this);
     }
 
-    // don't need to memorize. Always same. Instead of "Thread.sleep" function
 
     public void sleep(long milliseconds){
         try{
