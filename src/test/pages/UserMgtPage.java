@@ -20,6 +20,9 @@ public class UserMgtPage extends BasePage {
     @FindBy(id = "access-db-btn")
     public WebElement accessDbBtn;
 
+    @FindBy(xpath = "//table[@id='list-table']/tbody/tr")
+    public WebElement tableRow;
+
     public String[] registrationFormFields = {"Firstname", "Lastname", "Phonenumber", "Email", "Select-role"};
 
 
